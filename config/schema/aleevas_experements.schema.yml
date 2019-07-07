@@ -1,0 +1,7 @@
+filter_settings.ae_filter:
+  type: filter
+  label: 'Aleevas filter filter'
+  mapping:
+    example:
+      type: string
+      label: The Big Brother filter
