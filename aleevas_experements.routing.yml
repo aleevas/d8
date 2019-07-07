@@ -13,3 +13,19 @@ aleevas_experements.settings_form:
     _form: 'Drupal\aleevas_experements\Form\SettingsForm'
   requirements:
     _permission: 'administer aleevas_experements configuration'
+
+aleevas_experements.example_confirm_form:
+  path: '/aleevas-experements/confirm-form'
+  defaults:
+    _title: 'Example confirm'
+    _form: 'Drupal\aleevas_experements\Form\AleevasExampleConfirmForm'
+  requirements:
+    _permission: 'administer site configuration'
+
+aleevas_experements.example_simple_form:
+  path: '/aleevas-experements/simple-form'
+  defaults:
+    _title: 'Example'
+    _form: 'Drupal\aleevas_experements\Form\AleevasExampleForm'
+  requirements:
+    _permission: 'access content'

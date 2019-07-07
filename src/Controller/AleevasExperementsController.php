@@ -13,16 +13,7 @@ class AleevasExperementsController extends ControllerBase {
    * Builds the response.
    */
   public function build() {
-
-    $build['content'] = [
-      '#type' => 'item',
-      '#markup' => $this->t('It works!'),
-      '#attached' => [
-        'library' => ['aleevas_experements/local.library']
-      ]
-    ];
-
-    return $build;
+    return $this->formBuilder()->getForm('Drupal\aleevas_experements\Form\AleevasExampleForm', '+3 (800) 123-45-67');
   }
 
 }

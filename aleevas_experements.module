@@ -14,11 +14,12 @@
  */
 function MYTHEME_theme() {
   return [
-    'als_exp_template' => [
-      'variables' => [
-        'items' => NULL,
-      ],
+    'als_exp_form' => [
+      'render element' => 'form',
       'template' => 'templates/aleevas-template',
+      '#attached' => [
+        'library' => ['aleevas_experements/local.library']
+      ]
     ],
   ];
 }
