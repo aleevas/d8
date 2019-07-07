@@ -17,6 +17,9 @@ class AleevasExperementsController extends ControllerBase {
     $build['content'] = [
       '#type' => 'item',
       '#markup' => $this->t('It works!'),
+      '#attached' => [
+        'library' => ['aleevas_experements/local.library']
+      ]
     ];
 
     return $build;

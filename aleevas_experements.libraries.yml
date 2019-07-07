@@ -1,5 +1,5 @@
 # Custom module library for general purposes.
-aleevas_experements:
+local.library:
   js:
     js/aleevas-experements.js: {}
   css:
@@ -8,7 +8,6 @@ aleevas_experements:
   dependencies:
     - core/drupalSettings
     - aleevas_experements/jquery-labelauty
-
 # Third-party library (self hosted).
 jquery-labelauty:
   remote: https://github.com/fntneves/jquery-labelauty
