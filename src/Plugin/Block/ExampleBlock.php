@@ -3,6 +3,8 @@
 namespace Drupal\aleevas_experements\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Session\AccountInterface;
 
 /**
  * Provides an example block.
@@ -23,6 +25,10 @@ class ExampleBlock extends BlockBase {
       '#markup' => $this->t('It works!'),
     ];
     return $build;
+  }
+
+  protected function blockAccess(AccountInterface $account) {
+    return AccessResult::allowedIfHasPermission($account, 'administer blocks');
   }
 
 }
