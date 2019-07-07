@@ -1,0 +1,5 @@
+name: aleevas_experements
+type: module
+description: This module contains some experiments according to Drupal 8 API
+package: Custom
+core: 8.x

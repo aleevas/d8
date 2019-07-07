@@ -1,0 +1,6 @@
+services:
+  aleevas_experements.event_subscriber:
+    class: Drupal\aleevas_experements\EventSubscriber\AleevasExperementsSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }
