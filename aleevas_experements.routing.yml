@@ -29,3 +29,11 @@ aleevas_experements.example_simple_form:
     _form: 'Drupal\aleevas_experements\Form\AleevasExampleForm'
   requirements:
     _permission: 'access content'
+
+aleevas.autocomplete:
+  path: 'aleevas/autocomplete'
+  defaults:
+    _title: 'Autocomplete route'
+    _controller: '\Drupal\aleevas_experements\Controller\AleevasAutocompleteController::autocomplete'
+  requirements:
+    _permission: 'access content'

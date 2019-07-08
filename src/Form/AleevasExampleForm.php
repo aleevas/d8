@@ -35,6 +35,12 @@ class AleevasExampleForm extends FormBase {
       '#default_value' => $phone ?? '',
     ];
 
+    $form['custom_autocomplete_field'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Custom autocomplete'),
+      '#autocomplete_route_name' => 'aleevas.autocomplete',
+    ];
+
     $form['actions'] = [
       '#type' => 'actions',
     ];
