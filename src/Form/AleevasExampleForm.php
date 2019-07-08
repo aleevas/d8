@@ -2,13 +2,41 @@
 
 namespace Drupal\aleevas_experements\Form;
 
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provides a aleevas_experements form.
  */
 class AleevasExampleForm extends FormBase {
+
+  /**
+   * The entity storage handler.
+   *
+   * @var \Drupal\Core\Entity\EntityStorageInterface
+   */
+  protected $entityStorage;
+
+  /**
+   * Constructs a new AleevasExampleForm.
+   *
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
+   *   The entity type manager.
+   */
+  public function __construct(EntityTypeManagerInterface $entity_type_manager) {
+    $this->entityStorage = $entity_type_manager->getStorage('node');
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('entity_type.manager')
+    );
+  }
 
   /**
    * {@inheritdoc}
@@ -39,6 +67,16 @@ class AleevasExampleForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Custom autocomplete'),
       '#autocomplete_route_name' => 'aleevas.autocomplete',
+    ];
+
+    $form['core_autocomplete'] = [
+      '#title' => $this->t('Core autocomplete'),
+      '#type' => 'entity_autocomplete',
+      '#target_type' => 'node',
+      '#default_value' => $this->entityStorage->load(1),
+      '#selection_settings' => array(
+        'target_bundles' => array('article', 'page'),
+      ),
     ];
 
     $form['actions'] = [
