@@ -9,6 +9,9 @@
  * @see https://www.drupal.org/node/2217931
  */
 
+use Drupal\node\Entity\Node;
+
+
 /**
  * Implements hook_theme().
  */
@@ -29,4 +32,39 @@ function MYTHEME_theme() {
  */
 function aleevas_experements_page_attachments(array &$attachments) {
   $attachments['#attached']['library'][] = 'aleevas_experements/local.library';
+}
+
+/**
+ * Implements hook_cron().
+ */
+function aleevas_experements_cron() {
+  _create_nodes_from_queue();
+}
+
+/**
+ * Help function.
+ * Create nodes from queue.
+ *
+ */
+function _create_nodes_from_queue() {
+  $queue = Drupal::queue('aleevas_mass_sending');
+  $current_language = Drupal::languageManager()->getCurrentLanguage()->getId();
+  $end = time() + 30;
+  while (time() < $end && ($item = $queue->claimItem())) {
+    $data = [
+      'type' => 'article',
+      'title' => t('The article created by @user', ['@user' => $item->data['name']]),
+      'langcode' => $current_language,
+      'uid' => $item->data['uid'],
+      'status' => 1,
+      'field_fields' => [],
+    ];
+    // Use Node static class.
+    // $node = Node::create($data);
+    // Use the entity manager.
+    $node = Drupal::entityTypeManager()->getStorage('node')->create($data);
+    $node->save();
+
+    $queue->deleteItem($item);
+  }
 }
