@@ -41,8 +41,6 @@ function aleevas_experements_cron() {
   _create_nodes_from_queue();
 }
 
-
-
 /**
  * Implements hook_preprocess_html().
  */

@@ -8,6 +8,12 @@ local.library:
   dependencies:
     - core/drupalSettings
     - aleevas_experements/jquery-labelauty
+modal_form.library:
+  version: 1.x
+  js:
+    js/modal_form.js: {}
+  dependencies:
+    - core/drupal.dialog.ajax
 # Third-party library (self hosted).
 jquery-labelauty:
   remote: https://github.com/fntneves/jquery-labelauty

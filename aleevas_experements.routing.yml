@@ -45,3 +45,11 @@ aleevas.queue_node:
     _form: 'Drupal\aleevas_experements\Form\AleevasQueueNodeForm'
   requirements:
     _permission: 'administer node'
+
+aleevas_experements.aleevas_modal_after_submit_from:
+  path: '/aleevas-experements/aleevas-modal-after-submit-form'
+  defaults:
+    _title: 'Aleevas modal after submit form'
+    _form: 'Drupal\aleevas_experements\Form\AleevasModalAfterSubmitForm'
+  requirements:
+    _permission: 'access content'
