@@ -4,3 +4,8 @@ services:
     arguments: ['@messenger']
     tags:
       - { name: event_subscriber }
+
+  aleevas_experements.breadcrumb:
+    class: Drupal\aleevas_experements\AleevasExperementsBreadcrumbBuilder
+    tags:
+      - { name: breadcrumb_builder, priority: 1000 }
