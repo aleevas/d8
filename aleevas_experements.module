@@ -9,6 +9,7 @@
  * @see https://www.drupal.org/node/2217931
  */
 
+use Drupal\Component\Utility\Html;
 use Drupal\node\Entity\Node;
 
 
@@ -53,6 +54,25 @@ function aleevas_experements_preprocess_html(&$variables) {
     ],
   ];
   $variables['#attached']['html_head'][] = [$title, 'title'];
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function aleevas_experements_form_contact_message_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  $form['system_messages'] = [
+    '#markup' => '<div id="' . Html::getClass($form_id) . '-messages"></div>',
+    '#weight' => -100,
+  ];
+
+  $form['actions']['submit']['#ajax'] = [
+    'callback' => 'Drupal\aleevas_experements\Form\AjaxContactSubmit::ajaxSubmitCallback',
+    'event' => 'click',
+    'progress' => [
+      'type' => 'throbber',
+    ],
+  ];
 }
 
 /**

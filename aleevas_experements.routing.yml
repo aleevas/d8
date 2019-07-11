@@ -53,3 +53,11 @@ aleevas_experements.aleevas_modal_after_submit_from:
     _form: 'Drupal\aleevas_experements\Form\AleevasModalAfterSubmitForm'
   requirements:
     _permission: 'access content'
+
+aleevas_experements.aleevas_ajax_submit:
+  path: '/aleevas-experements/aleevas-ajax-submit'
+  defaults:
+    _title: 'Aleevas ajax submit'
+    _form: 'Drupal\aleevas_experements\Form\AleevasAjaxSubmitForm'
+  requirements:
+    _permission: 'access content'
