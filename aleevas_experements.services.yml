@@ -9,3 +9,7 @@ services:
     class: Drupal\aleevas_experements\AleevasExperementsBreadcrumbBuilder
     tags:
       - { name: breadcrumb_builder, priority: 1000 }
+
+  plugin.manager.plugin_messenger:
+    class: Drupal\aleevas_experements\PluginMessengerPluginManager
+    parent: default_plugin_manager
