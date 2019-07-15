@@ -1,0 +1,47 @@
+aleevas.admin_config_settings_link:
+  title: 'Aleevas'
+  parent: system.admin_config
+  route_name: aleevas.admin_config_settings
+  weight: -50
+
+aleevas.collect_phone_settings:
+  title: 'Collect Phone settings'
+  description: 'In this settings you can set default phone number for collect phone form.'
+  parent: aleevas.admin_config_settings_link
+  route_name: aleevas_experements.settings_form
+  weight: 1
+
+# Simple link.
+aleevas_experements.node_add:
+  title: Add content
+  description: Add new content.
+  menu_name: main
+  route_name: node.add_page
+  weight: 10
+
+# Child link.
+aleevas_experements.node_add_article:
+  title: Add article
+  menu_name: main
+  parent: aleevas_experements.node_add
+  route_name: node.add
+  route_parameters:
+    node_type: article
+  weight: 20
+
+# Dynamic link.
+aleevas_experements.user:
+  menu_name: main
+  class: Drupal\user\Plugin\Menu\LoginLogoutMenuLink
+  weight: 30
+
+# External link.
+aleevas_experements.drupal.org:
+  title: Drupal.org
+  description: Drupal is an open source platform for building amazing digital experiences.
+  url: https://www.drupal.org
+  menu_name: main
+  weight: 40
+  options:
+    attributes:
+      target: _blank

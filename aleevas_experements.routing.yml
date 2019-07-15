@@ -61,3 +61,19 @@ aleevas_experements.aleevas_ajax_submit:
     _form: 'Drupal\aleevas_experements\Form\AleevasAjaxSubmitForm'
   requirements:
     _permission: 'access content'
+
+aleevas.admin_config_settings:
+  path: '/admin/config/aleevas'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Aleevas Settings'
+  requirements:
+    _permission: 'access administration pages'
+
+aleevas.collect_phone_admin_settings:
+  path: '/admin/config/aleevas/phone-settings'
+  defaults:
+    _form: '\Drupal\aleevas\Form\CollectPhoneSettings'
+    _title: 'Settings for CollectPhone form.'
+  requirements:
+    _permission: 'administer site configuration'
