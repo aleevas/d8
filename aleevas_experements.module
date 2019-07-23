@@ -97,6 +97,18 @@ function  aleevas_experements_preprocess_page(&$variables) {
 }
 
 /**
+ * Implements hook_imagemagick_arguments_alter().
+ */
+function  aleevas_experements_imagemagick_arguments_alter(\Drupal\imagemagick\ImagemagickExecArguments $arguments, $command) {
+  // https://developers.google.com/speed/docs/insights/OptimizeImages
+  $arguments->add('-sampling-factor 4:2:0');
+  // Progression JPEG and interlaced PNG's support.
+  $arguments->add('-interlace Plane');
+  // Clean image for all unused data. EXIF etcetera.
+  $arguments->add('-strip');
+}
+
+/**
  * Help function.
  * Create nodes from queue.
  *
