@@ -12,7 +12,6 @@
 use Drupal\Component\Utility\Html;
 use Drupal\node\Entity\Node;
 
-
 /**
  * Implements hook_theme().
  */
@@ -54,6 +53,9 @@ function aleevas_experements_preprocess_html(&$variables) {
     ],
   ];
   $variables['#attached']['html_head'][] = [$title, 'title'];
+  // Use the random message generator.
+  $random_message = \Drupal::service('aleevas_experiments.random_message')->getRandomMessage();
+  \Drupal::messenger()->addMessage($random_message);
 }
 
 /**

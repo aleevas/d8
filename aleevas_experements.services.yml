@@ -13,3 +13,6 @@ services:
   plugin.manager.plugin_messenger:
     class: Drupal\aleevas_experements\PluginMessengerPluginManager
     parent: default_plugin_manager
+
+  aleevas_experiments.random_message:
+    class: Drupal\aleevas_experements\AleevasExperimentsRandomMessageGenerator
