@@ -1,3 +1,6 @@
+parameters:
+  aleevas_experiments.message_types: ['status', 'warning', 'error']
+
 services:
   aleevas_experiments.event_subscriber:
     class: Drupal\aleevas_experiments\EventSubscriber\AleevasExperimentsSubscriber
@@ -14,5 +17,9 @@ services:
     class: Drupal\aleevas_experiments\PluginMessengerPluginManager
     parent: default_plugin_manager
 
+  aleevas_experiments.random_message_generator:
+    class: Drupal\aleevas_experiments\AleevasRandomMessageGenerator
+
   aleevas_experiments.random_message:
-    class: Drupal\aleevas_experiments\AleevasExperimentsRandomMessageGenerator
+    class: Drupal\aleevas_experiments\AleevasRandomMessage
+    arguments: ['@aleevas_experiments.random_message_generator', '@messenger','%aleevas_experiments.message_types%']

@@ -54,8 +54,9 @@ function aleevas_experiments_preprocess_html(&$variables) {
   ];
   $variables['#attached']['html_head'][] = [$title, 'title'];
   // Use the random message generator.
-  $random_message = \Drupal::service('aleevas_experiments.random_message')->getRandomMessage();
-  \Drupal::messenger()->addMessage($random_message);
+//  $random_message = \Drupal::service('aleevas_experiments.random_message_generator')->getRandomMessage();
+//  \Drupal::messenger()->addMessage($random_message);
+  \Drupal::service('aleevas_experiments.random_message')->setRandomMessage();
 }
 
 /**

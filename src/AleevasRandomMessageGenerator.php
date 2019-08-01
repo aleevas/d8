@@ -3,9 +3,9 @@
 namespace Drupal\aleevas_experiments;
 
 /**
- * AleevasExperimentsRandomMessageGenerator service.
+ * AleevasRandomMessageGenerator service.
  */
-class AleevasExperimentsRandomMessageGenerator {
+class AleevasRandomMessageGenerator {
 
   /**
    * @var array
