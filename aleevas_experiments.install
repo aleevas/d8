@@ -2,28 +2,28 @@
 
 /**
  * @file
- * Install, update and uninstall functions for the aleevas_experements module.
+ * Install, update and uninstall functions for the aleevas_experiments module.
  */
 
 /**
  * Implements hook_install().
  */
-function aleevas_experements_install() {
+function aleevas_experiments_install() {
   \Drupal::messenger()->addStatus(__FUNCTION__);
 }
 
 /**
  * Implements hook_uninstall().
  */
-function aleevas_experements_uninstall() {
+function aleevas_experiments_uninstall() {
   \Drupal::messenger()->addStatus(__FUNCTION__);
 }
 
 /**
  * Implements hook_schema().
  */
-function aleevas_experements_schema() {
-  $schema['aleevas_experements_example'] = [
+function aleevas_experiments_schema() {
+  $schema['aleevas_experiments_example'] = [
     'description' => 'Table description.',
     'fields' => [
       'id' => [
@@ -80,14 +80,14 @@ function aleevas_experements_schema() {
 /**
  * Implements hook_requirements().
  */
-function aleevas_experements_requirements($phase) {
+function aleevas_experiments_requirements($phase) {
   $requirements = [];
 
   if ($phase == 'runtime') {
     $value = mt_rand(0, 100);
-    $requirements['aleevas_experements_status'] = [
-      'title' => t('aleevas_experements status'),
-      'value' => t('aleevas_experements value: @value', ['@value' => $value]),
+    $requirements['aleevas_experiments_status'] = [
+      'title' => t('aleevas_experiments status'),
+      'value' => t('aleevas_experiments value: @value', ['@value' => $value]),
       'severity' => $value > 50 ? REQUIREMENT_INFO : REQUIREMENT_WARNING,
     ];
   }

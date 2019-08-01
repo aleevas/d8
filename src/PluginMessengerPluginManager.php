@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\aleevas_experements;
+namespace Drupal\aleevas_experiments;
 
 use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
@@ -27,8 +27,8 @@ class PluginMessengerPluginManager extends DefaultPluginManager {
       'Plugin/PluginMessenger',
       $namespaces,
       $module_handler,
-      'Drupal\aleevas_experements\PluginMessengerInterface',
-      'Drupal\aleevas_experements\Annotation\PluginMessenger'
+      'Drupal\aleevas_experiments\PluginMessengerInterface',
+      'Drupal\aleevas_experiments\Annotation\PluginMessenger'
     );
     $this->alterInfo('plugin_messenger_info');
     $this->setCacheBackend($cache_backend, 'plugin_messenger_plugins');

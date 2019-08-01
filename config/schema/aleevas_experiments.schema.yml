@@ -6,7 +6,7 @@ filter_settings.ae_filter:
       type: string
       label: The Big Brother filter
 
-block.settings.aleevas_experements_contact_form_in_modal:
+block.settings.aleevas_experiments_contact_form_in_modal:
   type: block_settings
   label: 'Contact form in modal block'
   mapping:

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\aleevas_experements\Form;
+namespace Drupal\aleevas_experiments\Form;
 
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Ajax\AjaxResponse;
@@ -9,7 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Class AjaxContactSubmit
- * @package Drupal\aleevas_experements\Form\AjaxContactSubmit
+ * @package Drupal\aleevas_experiments\Form\AjaxContactSubmit
  */
 
 class AjaxContactSubmit {

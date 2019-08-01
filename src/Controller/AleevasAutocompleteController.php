@@ -1,13 +1,13 @@
 <?php
 
-namespace Drupal\aleevas_experements\Controller;
+namespace Drupal\aleevas_experiments\Controller;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Drupal\Component\Utility\Html;
 
 /**
- * Returns responses for aleevas_experements routes.
+ * Returns responses for aleevas_experiments routes.
  */
 class AleevasAutocompleteController {
 

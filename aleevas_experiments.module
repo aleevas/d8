@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Primary module hooks for aleevas_experements module.
+ * Primary module hooks for aleevas_experiments module.
  *
  * @DCG
  * This file is no longer required in Drupal 8.
@@ -15,13 +15,13 @@ use Drupal\node\Entity\Node;
 /**
  * Implements hook_theme().
  */
-function MYTHEME_theme() {
+function aleevas_experiments_theme() {
   return [
     'als_exp_form' => [
       'render element' => 'form',
       'template' => 'templates/aleevas-template',
       '#attached' => [
-        'library' => ['aleevas_experements/local.library']
+        'library' => ['aleevas_experiments/local.library']
       ]
     ],
   ];
@@ -30,21 +30,21 @@ function MYTHEME_theme() {
 /**
  * Implements hook_page_attachments_alter().
  */
-function aleevas_experements_page_attachments(array &$attachments) {
-  $attachments['#attached']['library'][] = 'aleevas_experements/local.library';
+function aleevas_experiments_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'aleevas_experiments/local.library';
 }
 
 /**
  * Implements hook_cron().
  */
-function aleevas_experements_cron() {
+function aleevas_experiments_cron() {
   _create_nodes_from_queue();
 }
 
 /**
  * Implements hook_preprocess_html().
  */
-function aleevas_experements_preprocess_html(&$variables) {
+function aleevas_experiments_preprocess_html(&$variables) {
   $title = [
     '#tag' => 'meta',
     '#attributes' => [
@@ -61,7 +61,7 @@ function aleevas_experements_preprocess_html(&$variables) {
 /**
  * Implements hook_form_BASE_FORM_ID_alter().
  */
-function aleevas_experements_form_contact_message_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function aleevas_experiments_form_contact_message_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
 
   $form['system_messages'] = [
     '#markup' => '<div id="' . Html::getClass($form_id) . '-messages"></div>',
@@ -69,7 +69,7 @@ function aleevas_experements_form_contact_message_form_alter(&$form, \Drupal\Cor
   ];
 
   $form['actions']['submit']['#ajax'] = [
-    'callback' => 'Drupal\aleevas_experements\Form\AjaxContactSubmit::ajaxSubmitCallback',
+    'callback' => 'Drupal\aleevas_experiments\Form\AjaxContactSubmit::ajaxSubmitCallback',
     'event' => 'click',
     'progress' => [
       'type' => 'throbber',
@@ -80,7 +80,7 @@ function aleevas_experements_form_contact_message_form_alter(&$form, \Drupal\Cor
 /**
  * Implements hook_preprocess_page().
  */
-function  aleevas_experements_preprocess_page(&$variables) {
+function  aleevas_experiments_preprocess_page(&$variables) {
   $plugin_service = \Drupal::service('plugin.manager.plugin_messenger');
   foreach ($plugin_service->getDefinitions() as $plugin_id => $plugin) {
     $instance = $plugin_service->createInstance($plugin_id);
@@ -101,7 +101,7 @@ function  aleevas_experements_preprocess_page(&$variables) {
 /**
  * Implements hook_imagemagick_arguments_alter().
  */
-function  aleevas_experements_imagemagick_arguments_alter(\Drupal\imagemagick\ImagemagickExecArguments $arguments, $command) {
+function  aleevas_experiments_imagemagick_arguments_alter(\Drupal\imagemagick\ImagemagickExecArguments $arguments, $command) {
   // https://developers.google.com/speed/docs/insights/OptimizeImages
   $arguments->add('-sampling-factor 4:2:0');
   // Progression JPEG and interlaced PNG's support.

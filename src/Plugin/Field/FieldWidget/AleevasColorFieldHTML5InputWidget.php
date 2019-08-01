@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\aleevas_experements\Plugin\Field\FieldWidget\AleevasColorFieldHTML5InputWidget.
+ * Contains \Drupal\aleevas_experiments\Plugin\Field\FieldWidget\AleevasColorFieldHTML5InputWidget.
  */
 
-namespace Drupal\aleevas_experements\Plugin\Field\FieldWidget;
+namespace Drupal\aleevas_experiments\Plugin\Field\FieldWidget;
 
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\WidgetBase;

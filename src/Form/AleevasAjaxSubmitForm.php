@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\aleevas_experements\Form;
+namespace Drupal\aleevas_experiments\Form;
 
 use Drupal\Component\Utility\EmailValidatorInterface;
 use Drupal\Core\Ajax\AjaxResponse;
@@ -12,7 +12,7 @@ use Drupal\Core\Render\Renderer;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Provides a aleevas_experements form.
+ * Provides a aleevas_experiments form.
  */
 class AleevasAjaxSubmitForm extends FormBase {
 
@@ -58,7 +58,7 @@ class AleevasAjaxSubmitForm extends FormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'aleevas_experements_aleevas_ajax_submit';
+    return 'aleevas_experiments_aleevas_ajax_submit';
   }
 
   /**

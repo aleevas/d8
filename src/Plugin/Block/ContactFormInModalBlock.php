@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\aleevas_experements\Plugin\Block;
+namespace Drupal\aleevas_experiments\Plugin\Block;
 
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Access\AccessResult;
@@ -16,7 +16,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * Provides a contact form in modal block.
  *
  * @Block(
- *   id = "aleevas_experements_contact_form_in_modal",
+ *   id = "aleevas_experiments_contact_form_in_modal",
  *   admin_label = @Translation("Contact form in modal"),
  *   category = @Translation("Custom")
  * )
@@ -65,7 +65,7 @@ class ContactFormInModalBlock extends BlockBase implements ContainerFactoryPlugi
   public function blockForm($form, FormStateInterface $form_state) {
     $form = parent::blockForm($form, $form_state);
     $config = $this->getConfiguration();
-    $form['#attached']['library'][] = 'aleevas_experements/modal_form.library';
+    $form['#attached']['library'][] = 'aleevas_experiments/modal_form.library';
 
     $form['form'] = [
       '#type' => 'select',

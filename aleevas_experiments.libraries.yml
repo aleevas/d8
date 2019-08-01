@@ -1,13 +1,13 @@
 # Custom module library for general purposes.
 local.library:
   js:
-    js/aleevas-experements.js: {}
+    js/aleevas-experiments.js: {}
   css:
     component:
-      css/aleevas-experements.css: {}
+      css/aleevas-experiments.css: {}
   dependencies:
     - core/drupalSettings
-    - aleevas_experements/jquery-labelauty
+    - aleevas_experiments/jquery-labelauty
 modal_form.library:
   version: 1.x
   js:

@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains Drupal\aleevas_experements\Plugin\Field\FieldType\AleevasColorFieldItem.
+ * Contains Drupal\aleevas_experiments\Plugin\Field\FieldType\AleevasColorFieldItem.
  */
 
-namespace Drupal\aleevas_experements\Plugin\Field\FieldType;
+namespace Drupal\aleevas_experiments\Plugin\Field\FieldType;
 
 use Drupal\Core\Field\FieldItemBase;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
@@ -15,7 +15,7 @@ use Drupal\Core\TypedData\DataDefinition;
  * @FieldType(
  *   id = "aleevas_color_field",
  *   label = @Translation("My color field"),
- *   module = "aleevas_experements",
+ *   module = "aleevas_experiments",
  *   description = @Translation("Custom color picker."),
  *   category = @Translation("Color"),
  *   default_widget = "aleevas_color_field_html5_input_widget",

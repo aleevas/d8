@@ -1,32 +1,32 @@
-aleevas_experements.example:
-  path: '/aleevas-experements/example'
+aleevas_experiments.example:
+  path: '/aleevas-experiments/example'
   defaults:
     _title: 'Example'
-    _controller: '\Drupal\aleevas_experements\Controller\AleevasExperementsController::build'
+    _controller: '\Drupal\aleevas_experiments\Controller\AleevasExperimentsController::build'
   requirements:
     _permission: 'access content'
 
-aleevas_experements.settings_form:
-  path: '/admin/config/system/aleevas-experements'
+aleevas_experiments.settings_form:
+  path: '/admin/config/system/aleevas-experiments'
   defaults:
-    _title: 'aleevas_experements settings'
-    _form: 'Drupal\aleevas_experements\Form\SettingsForm'
+    _title: 'aleevas_experiments settings'
+    _form: 'Drupal\aleevas_experiments\Form\SettingsForm'
   requirements:
-    _permission: 'administer aleevas_experements configuration'
+    _permission: 'administer aleevas_experiments configuration'
 
-aleevas_experements.example_confirm_form:
-  path: '/aleevas-experements/confirm-form'
+aleevas_experiments.example_confirm_form:
+  path: '/aleevas-experiments/confirm-form'
   defaults:
     _title: 'Example confirm'
-    _form: 'Drupal\aleevas_experements\Form\AleevasExampleConfirmForm'
+    _form: 'Drupal\aleevas_experiments\Form\AleevasExampleConfirmForm'
   requirements:
     _permission: 'administer site configuration'
 
-aleevas_experements.example_simple_form:
-  path: '/aleevas-experements/simple-form'
+aleevas_experiments.example_simple_form:
+  path: '/aleevas-experiments/simple-form'
   defaults:
     _title: 'Example'
-    _form: 'Drupal\aleevas_experements\Form\AleevasExampleForm'
+    _form: 'Drupal\aleevas_experiments\Form\AleevasExampleForm'
   requirements:
     _permission: 'access content'
 
@@ -34,7 +34,7 @@ aleevas.autocomplete:
   path: 'aleevas/autocomplete'
   defaults:
     _title: 'Autocomplete route'
-    _controller: '\Drupal\aleevas_experements\Controller\AleevasAutocompleteController::autocomplete'
+    _controller: '\Drupal\aleevas_experiments\Controller\AleevasAutocompleteController::autocomplete'
   requirements:
     _permission: 'access content'
 
@@ -42,23 +42,23 @@ aleevas.queue_node:
   path: '/admin/config/people/queue-node'
   defaults:
     _title: 'Create nodes by Queue'
-    _form: 'Drupal\aleevas_experements\Form\AleevasQueueNodeForm'
+    _form: 'Drupal\aleevas_experiments\Form\AleevasQueueNodeForm'
   requirements:
     _permission: 'administer node'
 
-aleevas_experements.aleevas_modal_after_submit_from:
-  path: '/aleevas-experements/aleevas-modal-after-submit-form'
+aleevas_experiments.aleevas_modal_after_submit_from:
+  path: '/aleevas-experiments/aleevas-modal-after-submit-form'
   defaults:
     _title: 'Aleevas modal after submit form'
-    _form: 'Drupal\aleevas_experements\Form\AleevasModalAfterSubmitForm'
+    _form: 'Drupal\aleevas_experiments\Form\AleevasModalAfterSubmitForm'
   requirements:
     _permission: 'access content'
 
-aleevas_experements.aleevas_ajax_submit:
-  path: '/aleevas-experements/aleevas-ajax-submit'
+aleevas_experiments.aleevas_ajax_submit:
+  path: '/aleevas-experiments/aleevas-ajax-submit'
   defaults:
     _title: 'Aleevas ajax submit'
-    _form: 'Drupal\aleevas_experements\Form\AleevasAjaxSubmitForm'
+    _form: 'Drupal\aleevas_experiments\Form\AleevasAjaxSubmitForm'
   requirements:
     _permission: 'access content'
 

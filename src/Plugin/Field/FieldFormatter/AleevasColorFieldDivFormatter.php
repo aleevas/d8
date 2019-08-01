@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\aleevas_experements\Plugin\Field\FieldFormatter\AleevasColorFieldDivFormatter.
+ * Contains \Drupal\aleevas_experiments\Plugin\Field\FieldFormatter\AleevasColorFieldDivFormatter.
  */
 
-namespace Drupal\aleevas_experements\Plugin\Field\FieldFormatter;
+namespace Drupal\aleevas_experiments\Plugin\Field\FieldFormatter;
 
 use Drupal\Component\Render\FormattableMarkup;
 use Drupal\Core\Field\FormatterBase;

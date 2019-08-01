@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\aleevas_experements\Form;
+namespace Drupal\aleevas_experiments\Form;
 
 use Drupal\Core\Form\ConfirmFormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -15,7 +15,7 @@ class AleevasExampleConfirmForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'aleevas_experements_example_confirm';
+    return 'aleevas_experiments_example_confirm';
   }
 
   /**

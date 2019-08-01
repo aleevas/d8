@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\aleevas_experements\Annotation;
+namespace Drupal\aleevas_experiments\Annotation;
 
 use Drupal\Component\Annotation\Plugin;
 

@@ -8,11 +8,11 @@ aleevas.collect_phone_settings:
   title: 'Collect Phone settings'
   description: 'In this settings you can set default phone number for collect phone form.'
   parent: aleevas.admin_config_settings_link
-  route_name: aleevas_experements.settings_form
+  route_name: aleevas_experiments.settings_form
   weight: 1
 
 # Simple link.
-aleevas_experements.node_add:
+aleevas_experiments.node_add:
   title: Add content
   description: Add new content.
   menu_name: main
@@ -20,23 +20,23 @@ aleevas_experements.node_add:
   weight: 10
 
 # Child link.
-aleevas_experements.node_add_article:
+aleevas_experiments.node_add_article:
   title: Add article
   menu_name: main
-  parent: aleevas_experements.node_add
+  parent: aleevas_experiments.node_add
   route_name: node.add
   route_parameters:
     node_type: article
   weight: 20
 
 # Dynamic link.
-aleevas_experements.user:
+aleevas_experiments.user:
   menu_name: main
   class: Drupal\user\Plugin\Menu\LoginLogoutMenuLink
   weight: 30
 
 # External link.
-aleevas_experements.drupal.org:
+aleevas_experiments.drupal.org:
   title: Drupal.org
   description: Drupal is an open source platform for building amazing digital experiences.
   url: https://www.drupal.org

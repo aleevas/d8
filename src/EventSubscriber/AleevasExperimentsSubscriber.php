@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\aleevas_experements\EventSubscriber;
+namespace Drupal\aleevas_experiments\EventSubscriber;
 
 use Drupal\Core\Messenger\MessengerInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -9,9 +9,9 @@ use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
 /**
- * aleevas_experements event subscriber.
+ * aleevas_experiments event subscriber.
  */
-class AleevasExperementsSubscriber implements EventSubscriberInterface {
+class AleevasExperimentsSubscriber implements EventSubscriberInterface {
 
   /**
    * The messenger.

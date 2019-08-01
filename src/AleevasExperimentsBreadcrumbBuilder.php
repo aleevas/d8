@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\aleevas_experements;
+namespace Drupal\aleevas_experiments;
 
 use Drupal\Core\Breadcrumb\Breadcrumb;
 use Drupal\Core\Breadcrumb\BreadcrumbBuilderInterface;
@@ -12,7 +12,7 @@ use Drupal\node\NodeInterface;
 /**
  * Provides a breadcrumb builder for articles.
  */
-class AleevasExperementsBreadcrumbBuilder implements BreadcrumbBuilderInterface {
+class AleevasExperimentsBreadcrumbBuilder implements BreadcrumbBuilderInterface {
 
   use StringTranslationTrait;
 

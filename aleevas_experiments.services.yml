@@ -1,0 +1,18 @@
+services:
+  aleevas_experiments.event_subscriber:
+    class: Drupal\aleevas_experiments\EventSubscriber\AleevasExperimentsSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }
+
+  aleevas_experiments.breadcrumb:
+    class: Drupal\aleevas_experiments\AleevasExperimentsBreadcrumbBuilder
+    tags:
+      - { name: breadcrumb_builder, priority: 1000 }
+
+  plugin.manager.plugin_messenger:
+    class: Drupal\aleevas_experiments\PluginMessengerPluginManager
+    parent: default_plugin_manager
+
+  aleevas_experiments.random_message:
+    class: Drupal\aleevas_experiments\AleevasExperimentsRandomMessageGenerator

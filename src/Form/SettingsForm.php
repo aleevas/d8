@@ -1,12 +1,12 @@
 <?php
 
-namespace Drupal\aleevas_experements\Form;
+namespace Drupal\aleevas_experiments\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Configure aleevas_experements settings for this site.
+ * Configure aleevas_experiments settings for this site.
  */
 class SettingsForm extends ConfigFormBase {
 
@@ -14,14 +14,14 @@ class SettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'aleevas_experements_settings';
+    return 'aleevas_experiments_settings';
   }
 
   /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['aleevas_experements.settings'];
+    return ['aleevas_experiments.settings'];
   }
 
   /**
@@ -31,7 +31,7 @@ class SettingsForm extends ConfigFormBase {
     $form['example'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Example'),
-      '#default_value' => $this->config('aleevas_experements.settings')->get('example'),
+      '#default_value' => $this->config('aleevas_experiments.settings')->get('example'),
     ];
     return parent::buildForm($form, $form_state);
   }
@@ -50,7 +50,7 @@ class SettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $this->config('aleevas_experements.settings')
+    $this->config('aleevas_experiments.settings')
       ->set('example', $form_state->getValue('example'))
       ->save();
     parent::submitForm($form, $form_state);

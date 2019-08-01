@@ -1,4 +1,0 @@
-administer aleevas_experements configuration:
-  title: 'Administer aleevas_experements configuration'
-  description: 'Optional description.'
-  restrict access: true

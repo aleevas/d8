@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\aleevas_experements\Form;
+namespace Drupal\aleevas_experiments\Form;
 
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\OpenModalDialogCommand;
@@ -8,7 +8,7 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Provides a aleevas_experements form.
+ * Provides a aleevas_experiments form.
  */
 class AleevasModalAfterSubmitForm extends FormBase {
 
@@ -16,7 +16,7 @@ class AleevasModalAfterSubmitForm extends FormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'aleevas_experements_aleevas_modal_after_submit_form';
+    return 'aleevas_experiments_aleevas_modal_after_submit_form';
   }
 
   /**

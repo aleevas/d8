@@ -1,8 +1,8 @@
 <?php
 
-namespace Drupal\aleevas_experements\Plugin\PluginMessenger;
+namespace Drupal\aleevas_experiments\Plugin\PluginMessenger;
 
-use Drupal\aleevas_experements\PluginMessengerPluginBase;
+use Drupal\aleevas_experiments\PluginMessengerPluginBase;
 
 /**
  * Plugin implementation of the plugin_messenger.

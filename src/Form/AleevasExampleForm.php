@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\aleevas_experements\Form;
+namespace Drupal\aleevas_experiments\Form;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormBase;
@@ -8,7 +8,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Provides a aleevas_experements form.
+ * Provides a aleevas_experiments form.
  */
 class AleevasExampleForm extends FormBase {
 
@@ -42,7 +42,7 @@ class AleevasExampleForm extends FormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'aleevas_experements_example';
+    return 'aleevas_experiments_example';
   }
 
   /**

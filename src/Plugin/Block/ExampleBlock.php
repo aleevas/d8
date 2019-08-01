@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\aleevas_experements\Plugin\Block;
+namespace Drupal\aleevas_experiments\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Access\AccessResult;
@@ -14,9 +14,9 @@ use Drupal\Core\Url;
  * Provides an example block.
  *
  * @Block(
- *   id = "aleevas_experements_example",
+ *   id = "aleevas_experiments_example",
  *   admin_label = @Translation("Modal API example: HTML link"),
- *   category = @Translation("aleevas_experements")
+ *   category = @Translation("aleevas_experiments")
  * )
  */
 class ExampleBlock extends BlockBase {

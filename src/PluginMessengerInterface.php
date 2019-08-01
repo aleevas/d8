@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\aleevas_experements;
+namespace Drupal\aleevas_experiments;
 
 /**
  * Interface for plugin_messenger plugins.

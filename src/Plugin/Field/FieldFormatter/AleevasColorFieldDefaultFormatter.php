@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\aleevas_experements\Plugin\Field\FieldFormatter\AleevasColorFieldDefaultFormatter.
+ * Contains \Drupal\aleevas_experiments\Plugin\Field\FieldFormatter\AleevasColorFieldDefaultFormatter.
  */
 
-namespace Drupal\aleevas_experements\Plugin\Field\FieldFormatter;
+namespace Drupal\aleevas_experiments\Plugin\Field\FieldFormatter;
 
 use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Field\FieldItemListInterface;

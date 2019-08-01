@@ -1,10 +1,10 @@
 <?php
 /**
  * @file
- * Contains \Drupal\aleevas_experements\Form\AleevasQueueNodeForm.
+ * Contains \Drupal\aleevas_experiments\Form\AleevasQueueNodeForm.
  */
 
-namespace Drupal\aleevas_experements\Form;
+namespace Drupal\aleevas_experiments\Form;
 
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
@@ -15,7 +15,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Queue\QueueInterface;
 
 /**
- * Provides a aleevas_experements form.
+ * Provides a aleevas_experiments form.
  */
 class AleevasQueueNodeForm extends FormBase {
 

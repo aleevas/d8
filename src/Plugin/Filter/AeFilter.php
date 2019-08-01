@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\aleevas_experements\Plugin\Filter;
+namespace Drupal\aleevas_experiments\Plugin\Filter;
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\filter\FilterProcessResult;
